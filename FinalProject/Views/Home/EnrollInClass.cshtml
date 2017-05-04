@@ -1,0 +1,17 @@
+﻿@model FinalProject.Models.EnrollClassModel
+@{
+    ViewBag.Title = "EnrollInClass";
+}
+
+<h2>Enroll In Class</h2>
+
+@using (Html.BeginForm("EnrollInClass", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.DropDownListFor(m => m.SelectedClassId, Model.ClassList)
+    <input type="submit" class="btn btn-default" value="Add Class" />
+}
+
+
+
+
+
